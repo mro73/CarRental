@@ -1,0 +1,7 @@
+{% extends "base.html.jinja" %}
+{% block left_panel }
+    <h2>Lista samochodów</h2>
+    {% for car in cars %}
+        <h3>{{car}}</h3>
+    {% endfor %}
+{% endblock left_panel }

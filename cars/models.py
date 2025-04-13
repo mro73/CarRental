@@ -54,10 +54,13 @@ class Car(models.Model):
     availability = models.BooleanField()
     insurance_expiry_date = models.DateField()
     equipment = models.ManyToManyField(Equipment)
-    image = models.ImageField()
+    image = models.ImageField(upload_to="images")
 
     def __str__(self) -> str:
         return self.brand + " " + self.model
     
+    @staticmethod
+    def get_car_category(self, category):
+        return dict(Car.CAR_CLASSES)[category]
 
 # Create your models here.
