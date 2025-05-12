@@ -13,6 +13,6 @@ def car(request, car_id):
 
 def category(request, category_name):
     cars = Car.objects.all().filter(category=category_name)
-    category = Car.get_car_category[category_name]
+    category = Car.get_car_category(category_name)
     context = {'cars': cars, 'category': category}
     return render(request, 'cars/category.html.jinja', context)

@@ -60,7 +60,7 @@ class Car(models.Model):
         return self.brand + " " + self.model
     
     @staticmethod
-    def get_car_category(self, category):
+    def get_car_category(category):
         return dict(Car.CAR_CLASSES)[category]
 
 # Create your models here.
